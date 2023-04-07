@@ -1,83 +1,112 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.allnavdiv{
+
+
+.allnavdiv {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 15px;
-      /* position: relative; */
     background-color: #F6F7F8;
 }
-#arrow{
+
+.nav-left a:hover {
+    color: black;
+    transition: .6s;
+}
+
+#arrow {
     cursor: pointer;
     margin: 0 4px;
 }
 
-.allnavdiv a{
+.allnavdiv a {
     text-decoration: none;
     color: #666666;
     position: relative;
     margin: 0 5px;
 }
-#carbtn{
+
+#carbtn {
     border-radius: 60px;
     background-color: white;
     border: 1px solid blue;
 }
-#carbtn:hover{
-    transition: 1s;  
+
+#carbtn:hover {
+    transition: 1s;
     background-color: #0056C1;
     color: #fff;
 }
-#carbtn:hover>span{
+
+.nav-right a {
+    margin: 0 10px;
+}
+
+.nav-right i {
+    margin: 0 10px;
+}
+
+#carbtn:hover>span {
     color: #fff;
     transition: 1s;
 }
-#carbtn>span{
+
+#carbtn>span {
     color: rgb(31, 31, 195);
     font-weight: 600;
     padding: 9px 4px;
 }
-.english{
+
+.english {
     padding-left: 10px;
-    
+
 }
-.english:hover{
+
+.english:hover {
     background-color: #F5F5F5;
 }
-.russian:hover{
+
+.russian:hover {
     background-color: #F5F5F5;
 }
-.russian{
+
+.russian {
     padding-left: 10px;
 }
-.languages{
+
+.languages {
     width: 10%;
-   
-    background-color:#fff;
+
+    background-color: #fff;
     display: flex;
     flex-direction: column;
-    left: 86%;
+    left: 83.4%;
+    top: 7%;
     display: none;
     position: absolute;
-    box-shadow: 1px 1px 1px 1px;
-    
+    box-shadow: 0px 0px 16px 2px;
+
 }
 
- .arrow{
+.arrow {
     transition: .4s;
     rotate: 180deg;
-} 
-
-
-
-.active{
-    display: block;
 }
-.languages::before{
+
+
+
+.active {
+    display: block !important;
+}
+
+
+
+.languages::before {
     border-color: transparent transparent #fff;
     border-style: solid;
     border-width: 0 7px 10px;
@@ -87,4 +116,153 @@
     left: 75%;
     position: absolute;
     width: 0;
+}
+
+.nav-part-2 {
+    background-color: #FFFFFF;
+    display: flex;
+    position: relative;
+    
+
+    align-items: center;
+    gap: 20px;
+}
+
+
+.navtext a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #666666;
+}
+
+#sp {
+    transition: .3s;
+}
+
+#sp:hover {
+    color: black;
+
+}
+
+.logo {
+    padding: 20px 40px;
+
+}
+
+.navtext {
+    margin: 0px 20px;
+}
+
+.logo>img {
+    width: 140%;
+}
+
+.vr {
+    transform: rotate(20deg);
+    height: 10px;
+
+}
+
+.vr:hover {
+    background-color: #0056C1;
+}
+
+.ib{
+    position: absolute;
+    top:98px;
+    right: 60px;
+}
+.ib>img{
+    width: 100%;
+    
+}
+#axtarbutton{
+    cursor: pointer;
+}
+
+#inp{
+    z-index: 1;
+    width: 100%;
+    top: 7%;
+    font-size: 40px;
+    color: #B1B1B1;
+    font-weight: 400;
+    padding: 50px;
+    border: none;
+    outline: none;
+    display: none;
+    position: absolute;
+    background-color:#fff;
+}
+#x{
+    position: absolute;
+    right: 30px;
+    font-size: 40px;
+    z-index: 1;
+    top: 13%;
+    cursor: pointer;
+    display: none;
+}
+
+::placeholder{
+    font-weight: 400;
+    font-size: 30px;
+}
+#bar{
+    position: absolute;
+    top: 11.3%;
+    right: 25px;
+    font-size: 40px;
+    display: none;
+}
+.box>img{
+    filter: invert(94%) sepia(83%) saturate(0) hue-rotate(39deg) brightness(145%) contrast(101%);
+}
+.bar-1{
+    width: 100%;
+    background-color: #0056C1;
+    height: 50px;
+}
+@media screen and (max-width: 576px){ 
+    .nav-left>a{
+        display: none;
+    }
+    #carbtn {
+        display: none;
+    }
+    .navtext a{
+        display: none;
+    }
+    .ib>img{
+        display: none;
+    }
+    .vr{
+        display: none;
+    }
+    #axt{
+        display: none;
+    }
+    .nav-right i {
+        margin: 0 6px;
+    }
+    .languages {
+        width: 25%;
+    
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        left: 55.5%;
+        top: 7%;
+        display: none;
+        position: absolute;
+        box-shadow: 0px 0px 16px 2px;
+    
+    }
+    #bar{
+        display: block;
+    }
+    
+    
+    
+    
 }
